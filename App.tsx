@@ -5,31 +5,20 @@
  * @format
  */
 
+//import type { PropsWithChildren } from 'react';
 import React from 'react';
-import type {PropsWithChildren} from 'react';
 import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
+  SafeAreaView
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import Navigation from './src/navigation/Navigation';
+import { globalStyles } from './src/theme/globalstyles';
 
-type SectionProps = PropsWithChildren<{
+/* type SectionProps = PropsWithChildren<{
   title: string;
-}>;
+}>; */
 
-function Section({children, title}: SectionProps): React.JSX.Element {
+/* function Section({children, title}: SectionProps): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
@@ -53,18 +42,19 @@ function Section({children, title}: SectionProps): React.JSX.Element {
       </Text>
     </View>
   );
-}
+} */
 
 function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
+  //const isDarkMode = useColorScheme() === 'dark';
 
-  const backgroundStyle = {
+ /*  const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
+  }; */
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
+    <SafeAreaView style={globalStyles.container}>
+      <Navigation />;
+     {/*  <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
@@ -91,12 +81,12 @@ function App(): React.JSX.Element {
           </Section>
           <LearnMoreLinks />
         </View>
-      </ScrollView>
+      </ScrollView> */}
     </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
+/* const styles = StyleSheet.create({
   sectionContainer: {
     marginTop: 32,
     paddingHorizontal: 24,
@@ -113,6 +103,6 @@ const styles = StyleSheet.create({
   highlight: {
     fontWeight: '700',
   },
-});
+}); */
 
 export default App;

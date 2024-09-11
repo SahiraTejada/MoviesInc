@@ -6,5 +6,7 @@ export const colors = {
   graySoft:'#DADADA',
   white: '#FFFFFF',
   black: '#000000',
-  gradient: ['#F34630', '#A31F12'],
+  gradientPrimary: ['#F34630', '#A31F12'],
+  gradientSecondary: ['#FFFFFF', '#FFFFFF'],
+  yellow:'#E7C825',
 };
